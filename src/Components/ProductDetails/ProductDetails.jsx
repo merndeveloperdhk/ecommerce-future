@@ -5,13 +5,23 @@ import RelatedProduct from "../RelatedProduct/RelatedProduct";
 import ProductImg from "../ProductCategory/ProductImg";
 import RightProduct from "../ProductCategory/RightProduct";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import ShareProducts from "./ShareProducts";
 import { Helmet } from "react-helmet-async";
 
 const ProductDetails = () => {
+  const details = useLoaderData();
+  // console.log(details);
   const {id} = useParams();
+  const idInt = parseInt(id);
+  const productDetails = details.find((singleDetail)=> singleDetail._id === idInt)
+  // console.log(detailss);
+  const{title, price,description,image_url,manufacturer, made_country} = productDetails;
   const[products, setProducts] = useState([]);
+
+  // random 
+  const randomIndex = Math.floor(Math.random() * details.length);
+  console.log(randomIndex );
    // products
    useEffect(()=>{
     fetch("/public/car.json")
@@ -40,18 +50,17 @@ const ProductDetails = () => {
       <div className="md:w-3/4  ">
         <div className="flex flex-col md:flex-row gap-3 bg-slate-200 p-2">
           <div className="w-full md:w-1/2 overflow-hidden">
-            {
-              products.slice(0,1).map(product =><img key={product._id}
-                className="h-[450px] overflow-hidden"
-                src = {product.image_url}
+          
+            <img
+                className="h-[450px] overflow-hidden object-cover"
+                src = {image_url}
                 alt=""
-              /> )
-            }
+              /> 
             
             {/* Sub image */}
             <div className="mt-2 flex flex-row gap-1 overflow-hidden ">
             {
-              products.slice(0,4).map(product =><img key={product._id}
+              products.slice (0,4).map(product =><img key={product._id}
                 className="w-[25%] overflow-hidden"
                 src = {product.image_url}
                 alt=""
@@ -61,20 +70,24 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className=" w-full md:w-1/2 px-2">
-            <div className="space-y-3">
-              <h1 className="text-2xl font-semibold">Product Title :{id} </h1>
+          
+            <div className="space-y-2">
+              <h1 className="text-2xl font-semibold">Product Name :{title} </h1>
+             
               <div className="flex gap-3">
                 <h1>Star mark</h1>
                 <h1>Write a review</h1>
               </div>
               <div>
-                <h1>Our Price</h1>
-                <p className="text-xl text-orange-500 font-bold">$72.00</p>
+                <div className="flex items-center gap-1 ">
+                <h1 className="font-semibold">ManuFacturer: </h1><span className="font-bold ">{manufacturer}</span>
+                </div>
+                <h1 className="my-2">Made of Country: <span className="font-bold">{made_country}</span></h1>
+                <h1>Price: <span className="text-xl text-orange-500 font-bold">${price}</span></h1>
+                
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-                animi veniam maxime ea voluptas soluta ullam necessitatibus
-                saepe eos modi?
+              <p>Description: <br/>
+               {description}
               </p>
               <h1 className="text-green-500">in stock: 20</h1>
             </div>

@@ -1,7 +1,7 @@
 [
     {
       "_id": 1,
-      "title": "Product A",
+      "title": "Harley Davidson",
       "description": "This is the description for Product A.",
       "price": 49.99,
       "manufacturer": "ABC Electronics",
@@ -13,11 +13,11 @@
     },
     {
       "_id": 2,
-      "title": "Product B",
+      "title": "Pulsar",
       "description": "A detailed description for Product B.",
       "price": 79.99,
-      "manufacturer": "XYZ Tech",
-      "made_country": "China",
+      "manufacturer": "Bajaj",
+      "made_country": "India",
       "launch_date": "2023-02-28",
       "image_url": "https://i.ibb.co/LdbTgrt/MTT-Turbine-Street-Fighter.jpg",
       "sale" : "-13%",
@@ -25,11 +25,11 @@
     },
     {
       "_id": 3,
-      "title": "Product C",
+      "title": "KTM Duke",
       "description": "Product C is known for its unique features.",
       "price": 129.99,
       "manufacturer": "Tech Innovators",
-      "made_country": "Japan",
+      "made_country": "Italy",
       "launch_date": "2023-03-10",
       "image_url": "https://i.ibb.co/F06WQXC/bike13.jpg",
       "sale" : "-10%",

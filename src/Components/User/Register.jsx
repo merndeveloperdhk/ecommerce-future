@@ -3,7 +3,7 @@ import SocialLogin from "./SocialLogin";
 import {
  
   sendEmailVerification,
-  updateProfile,
+  
 } from "firebase/auth";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
@@ -13,7 +13,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
   // const auth = getAuth();
-  const {createUser} = useContext(AuthContext);
+  const {createUser, handleUpdateProfile} = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -68,10 +68,7 @@ const Register = () => {
       setSuccess("Registration Successfully done.");
 
       //Update profile
-      updateProfile(result.user, {
-        displayName: name,
-        photoURL:photoUrl
-      })
+      handleUpdateProfile(name, photoUrl)
       .then(() => {
         // console.log("Profile updated");
       })
