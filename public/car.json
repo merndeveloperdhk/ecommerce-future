@@ -1,0 +1,141 @@
+[
+    {
+      "_id": 1,
+      "title": "Product A",
+      "description": "This is the description for Product A.",
+      "price": 49.99,
+      "manufacturer": "ABC Electronics",
+      "made_country": "USA",
+      "launch_date": "2023-01-15",
+      "image_url": "https://i.ibb.co/9NMXX3p/bike14.jpg",
+      "sale" : "-12%",
+      "reviews": 3
+    },
+    {
+      "_id": 2,
+      "title": "Product B",
+      "description": "A detailed description for Product B.",
+      "price": 79.99,
+      "manufacturer": "XYZ Tech",
+      "made_country": "China",
+      "launch_date": "2023-02-28",
+      "image_url": "https://i.ibb.co/LdbTgrt/MTT-Turbine-Street-Fighter.jpg",
+      "sale" : "-13%",
+      "reviews": 6
+    },
+    {
+      "_id": 3,
+      "title": "Product C",
+      "description": "Product C is known for its unique features.",
+      "price": 129.99,
+      "manufacturer": "Tech Innovators",
+      "made_country": "Japan",
+      "launch_date": "2023-03-10",
+      "image_url": "https://i.ibb.co/F06WQXC/bike13.jpg",
+      "sale" : "-10%",
+      "reviews": 8
+    },
+    {
+      "_id": 4,
+      "title": "Product D",
+      "description": "Introducing the latest Product D with cutting-edge technology.",
+      "price": 199.99,
+      "manufacturer": "Tech Gadgets Inc.",
+      "made_country": "Germany",
+      "launch_date": "2023-04-05",
+      "image_url": "https://i.ibb.co/bL8nNJZ/bike12.jpg",
+      "sale" : "-9%",
+      "reviews": 5
+    },
+    {
+      "_id": 5,
+      "title": "Product E",
+      "description": "Product E is designed for maximum performance and durability.",
+      "price": 149.99,
+      "manufacturer": "Tech Solutions Ltd.",
+      "made_country": "South Korea",
+      "launch_date": "2023-05-20",
+      "image_url": "https://i.ibb.co/sshXQVf/bike11.jpg",
+      "sale" : "-11%",
+      "reviews": 7
+    },
+    {
+      "_id": 6,
+      "title": "Product F",
+      "description": "Experience innovation with Product F.",
+      "price": 99.99,
+      "manufacturer": "InnovateTech",
+      "made_country": "Canada",
+      "launch_date": "2023-06-12",
+      "image_url": "https://i.ibb.co/WtN8Gw3/bike10.jpg",
+      "sale" : "-10%",
+      "reviews": 6
+    },
+    {
+      "_id": 7,
+      "title": "Product G",
+      "description": "Product G offers style and functionality in one package.",
+      "price": 69.99,
+      "manufacturer": "StyleTech",
+      "made_country": "Italy",
+      "launch_date": "2023-07-03",
+      "image_url": "https://i.ibb.co/F3ZHyTw/bike9.jpg",
+      "sale" : "-15%"
+    },
+    {
+      "_id": 8,
+      "title": "Product H",
+      "description": "Elevate your gaming experience with Product H.",
+      "price": 249.99,
+      "manufacturer": "GameMasters",
+      "made_country": "Taiwan",
+      "launch_date": "2023-08-18",
+      "image_url": "https://i.ibb.co/WkjhB7T/bike8.jpg",
+      "sale" : "-17%"
+    },
+    {
+      "_id": 9,
+      "title": "Product I",
+      "description": "Product I is the future of smart home technology.",
+      "price": 179.99,
+      "manufacturer": "SmartLiving Corp.",
+      "made_country": "Sweden",
+      "launch_date": "2023-09-09",
+      "image_url": "https://i.ibb.co/3zZN3X5/bike7.jpg",
+      "sale" : "-10%"
+    },
+    {
+      "_id": 10,
+      "title": "Product J",
+      "description": "Stay connected with Product J wherever you go.",
+      "price": 59.99,
+      "manufacturer": "ConnectX",
+      "made_country": "Singapore",
+      "launch_date": "2023-10-01",
+      "image_url": "https://i.ibb.co/z79ksm2/bike5.jpg",
+      "sale" : "-8%"
+    },
+   {
+      "_id": 11,
+      "title": "Product J",
+      "description": "Stay connected with Product J wherever you go.",
+      "price": 59.99,
+      "manufacturer": "ConnectX",
+      "made_country": "Singapore",
+      "launch_date": "2023-10-01",
+      "image_url": "https://i.ibb.co/StySb3k/bike-3.jpg",
+      "sale" : "-11%"
+    },
+   {
+      "_id": 12,
+      "title": "Product J",
+      "description": "Stay connected with Product J wherever you go.",
+      "price": 59.99,
+      "manufacturer": "ConnectX",
+      "made_country": "Singapore",
+      "launch_date": "2023-10-01",
+      "image_url": "https://i.ibb.co/DgpkckM/Bike-2.jpg",
+      "sale" : "-12%"
+    }
+  ]
+  

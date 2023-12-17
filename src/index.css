@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.leftMenu li{
+ background-color: #172554;
+ margin-bottom: 2px ;
+}
+.leftMenu li:hover{
+    background-color: #091230;
+    transition-delay: 0.05s;
+}

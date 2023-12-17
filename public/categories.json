@@ -1,0 +1,80 @@
+[
+    {
+        "_id": 1,
+        "name": "Electronics",
+        "icon": "https://i.ibb.co/9NMXX3p/bike14.jpg",
+        "add": 10
+    },
+    {
+        "_id": 2,
+        "name": "Property",
+        "icon": "https://i.ibb.co/LdbTgrt/MTT-Turbine-Street-Fighter.jpg",
+        "add": 4
+    },
+    {
+        "_id": 3,
+        "name": "Vehicles",
+        "icon": "https://i.ibb.co/F06WQXC/bike13.jpg",
+        "add": 19
+    },
+    {
+        "_id": 4,
+        "name": "Grocery",
+        "icon": "https://i.ibb.co/LdbTgrt/MTT-Turbine-Street-Fighter.jpg",
+        "add": 10
+    },
+    {
+        "_id": 5,
+        "name": "Pets and animals",
+        "icon": "https://i.ibb.co/bL8nNJZ/bike12.jpg",
+        "add": 12
+    },
+    {
+        "_id": 6,
+        "name": "Womens Fashion and beauty",
+        "icon": "https://i.ibb.co/F06WQXC/bike13.jpg",
+        "add": 13
+    },
+    {
+        "_id": 7,
+        "name": "Business and Industry",
+        "icon": "https://i.ibb.co/sshXQVf/bike11.jpg",
+        "add": 15
+    },
+    {
+        "_id": 8,
+        "name": "Education",
+        "icon": "https://i.ibb.co/bL8nNJZ/bike12.jpg",
+        "add": 20
+    },
+    {
+        "_id": 9,
+        "name": "Agriculture",
+        "icon": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg",
+        "add": 22
+    },
+    {
+        "_id": 10,
+        "name": "Hobbies, sports and kids",
+        "icon": "https://i.ibb.co/bL8nNJZ/bike12.jpg",
+        "add": 6
+    },
+    {
+        "_id": 11,
+        "name": "Mens fashion and grooming",
+        "icon": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg",
+        "add": 17
+    },
+    {
+        "_id": 12,
+        "name": "Jobs",
+        "icon": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
+        "add": 8
+    },
+    {
+        "_id": 13,
+        "name": "Home and Living",
+        "icon": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg",
+        "add": 18
+    }
+]
