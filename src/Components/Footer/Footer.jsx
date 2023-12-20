@@ -12,7 +12,7 @@ const Footer = () => {
 				<div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
 					<img src="https://i.ibb.co/2Y5Tv8R/Logo-05.png" alt="" />
 				</div>
-				<span className="self-center text-2xl font-semibold">M M GROUP</span>
+				<span className="self-center text-2xl font-semibold animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">M M GROUP</span>
 			</Link>
 			<div className="md:ps-4">
 			<h1>Road No:12 , House No: 16</h1>

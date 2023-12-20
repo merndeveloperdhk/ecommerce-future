@@ -2,7 +2,7 @@
     {
       "_id": 1,
       "title": "Harley Davidson",
-      "description": "This is the description for Product A.",
+      "description": "This is the description for Product A.This is the one of the most popular brand in the world",
       "price": 49.99,
       "manufacturer": "ABC Electronics",
       "made_country": "USA",

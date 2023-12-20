@@ -26,27 +26,27 @@ const BannerMiddle = () => {
         {
           categories.map(category => <Link
              key={category._id}
-             to={`category/${category._id}`}
+             to="/shop"
              ><li>{category.name}</li></Link>
              )
         }
        </ul>
       </div>
       {/* middle side */}
-      <div className="bg-green-400 col-span-6  ">
+      <div className=" col-span-6  ">
         <img  src="https://i.ibb.co/XYkmgfG/food1.jpg" className=" w-full h-[350px] object-cover  " alt="" />
       </div>
 
       {/* Right side */}
-      <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-2">
+      <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-2">
        
         {
-            products.slice(0,4).map((product, idx) => <div key={idx} className="card card-compact text-black bg-base-100 rounded-none">
+            products.slice(0,4).map((product, idx) => <div key={idx} className="card  card-compact text-black bg-base-100 rounded-none">
             <figure>
-              <img className="hover:scale-110 duration-300 w-full object-cover h-16" src={product.image_url} alt="Shoes" />
+              <img className="hover:scale-110 duration-300 md:w-full object-cover md:h-16" src={product.image_url} alt="Shoes" />
             </figure>
   
-            <div className="card-body ">
+            <div className="md:card-body ">
               <Link to={`/productDetails/${product._id}`}><h2 className="hover:text-green-600 duration-300 font-semibold ">{product.title}</h2></Link>
               {/* Ratings */}
               <div className="rating rating-sm">
@@ -76,7 +76,7 @@ const BannerMiddle = () => {
                   name="rating-6"
                   className="mask mask-star-2 bg-orange-400"
                 />
-                ( {product.reviews} )
+                ({product.reviews})
               </div>
               <div className="card-actions justify-end">
                 <p>$ {product.price}</p>

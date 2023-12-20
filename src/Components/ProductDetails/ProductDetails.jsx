@@ -5,7 +5,7 @@ import RelatedProduct from "../RelatedProduct/RelatedProduct";
 import ProductImg from "../ProductCategory/ProductImg";
 import RightProduct from "../ProductCategory/RightProduct";
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import ShareProducts from "./ShareProducts";
 import { Helmet } from "react-helmet-async";
 
@@ -15,9 +15,10 @@ const ProductDetails = () => {
   const {id} = useParams();
   const idInt = parseInt(id);
   const productDetails = details.find((singleDetail)=> singleDetail._id === idInt)
-  // console.log(detailss);
-  const{title, price,description,image_url,manufacturer, made_country} = productDetails;
+  console.log(productDetails);
+  const{title, price,description,image_url,manufacturer, made_country, _id} = productDetails;
   const[products, setProducts] = useState([]);
+  const[readMore, setReadMore] = useState(true);
 
   // random 
   const randomIndex = Math.floor(Math.random() * details.length);
@@ -28,6 +29,10 @@ const ProductDetails = () => {
     .then(res => res.json())
     .then(data => setProducts(data))
   },[]);
+  // handle add to cart
+  const handleAddToCart = (_id) => {
+    console.log(_id);
+  }
 
   return (
     <div className="flex flex-col md:flex-row md:justify-between gap-2 ">
@@ -52,7 +57,7 @@ const ProductDetails = () => {
           <div className="w-full md:w-1/2 overflow-hidden">
           
             <img
-                className="h-[450px] overflow-hidden object-cover"
+                className="min-h-fit overflow-hidden "
                 src = {image_url}
                 alt=""
               /> 
@@ -71,7 +76,7 @@ const ProductDetails = () => {
           </div>
           <div className=" w-full md:w-1/2 px-2">
           
-            <div className="space-y-2">
+            <div className="space-y-1">
               <h1 className="text-2xl font-semibold">Product Name :{title} </h1>
              
               <div className="flex gap-3">
@@ -82,13 +87,24 @@ const ProductDetails = () => {
                 <div className="flex items-center gap-1 ">
                 <h1 className="font-semibold">ManuFacturer: </h1><span className="font-bold ">{manufacturer}</span>
                 </div>
-                <h1 className="my-2">Made of Country: <span className="font-bold">{made_country}</span></h1>
+                <h1 className="my-1">Made of Country: <span className="font-bold">{made_country}</span></h1>
                 <h1>Price: <span className="text-xl text-orange-500 font-bold">${price}</span></h1>
                 
               </div>
-              <p>Description: <br/>
-               {description}
-              </p>
+              <div>Description: <br/>
+            
+               {
+                readMore ? <>
+                <p>
+                  {description.substring(0,50)} ...<Link onClick={()=>setReadMore(false)} className="text-green-600">Read more</Link>
+                </p>
+                </>: <>
+                <p>
+                  {description}<Link onClick={()=> setReadMore(true)} className="text-red-600"> ...Read less</Link>
+                </p>
+                </>
+               }
+              </div>
               <h1 className="text-green-500">in stock: 20</h1>
             </div>
             <label htmlFor="">Quantity</label>
@@ -101,14 +117,15 @@ const ProductDetails = () => {
                   <button>+</button>
                 </div>
               </div>
-              <div className="flex gap-1 items-center btn bg-orange-500 text-white">
+              <button type="button"   onClick={()=> handleAddToCart(_id)} className="flex gap-1 items-center btn bg-orange-500 text-white">
                 <MdOutlineShoppingCartCheckout />
-                <button>Add to Cart</button>
-              </div>
-              <button className="btn bg-teal-800 text-white">Buy Now</button>
+                <p>Add to Cart</p>
+              </button>
+              {/* Buy now button */}
+              <button onClick={()=> alert('Buy now button')} className="btn bg-teal-800 text-white">Buy Now</button>
             </div>
             {/* whish list and compare */}
-            <div className="flex md:gap-6 md:mt-6 mb-2 md:text-lg font-semibold w-full">
+            <div className="flex md:gap-6 md:mt-3 mb-1 md:text-lg font-semibold w-full">
               <div className="flex items-center gap-1">
                 <button className="flex items-center gap-1">
                 <FaRegHeart />
@@ -129,14 +146,14 @@ const ProductDetails = () => {
             <ShareProducts></ShareProducts>
             </div>
             {/* Ready to shop */}
-            <div className="flex gap-2 items-center md:mt-8 px-2  bg-slate-300">
+            <div className="flex gap-2 items-center md:mt-4 px-2  bg-slate-300">
               <MdLocalShipping />
               <h1>Ready to ship</h1>
             </div>
           </div>
         </div>
         {/* Related Products */}
-        <div className="md:mt-8 bg-slate-200 p-2">
+        <div className="md:mt-4 bg-slate-200 p-2">
           <h1 className="text-2xl font-bold md:mb-6">Related Products</h1>
           <div>
             <RelatedProduct></RelatedProduct>

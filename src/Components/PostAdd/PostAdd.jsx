@@ -8,7 +8,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 const PostAdd = () => {
   const{user} = useContext(AuthContext);
   const [categories, setCategories] = useState([]);
-  
+  console.log(categories);
 
   useEffect(()=>{
     fetch('/public/categories.json')
@@ -83,9 +83,9 @@ const PostAdd = () => {
               </option>
               {
                 categories.slice(0,5).map(category => <option 
-                  key={category.id} 
+                  key={category._id} 
                 
-                >{category.id}</option>)
+                >{category._id}</option>)
               }
             </select>
           </div>
@@ -100,9 +100,9 @@ const PostAdd = () => {
               </option>
               {
                 categories.slice(0,4).map(category => <option 
-                  key={category.id} 
+                  key={category._id} 
                 
-                >{category.id}</option>)
+                >{category._id}</option>)
               }
             </select>
           </div>

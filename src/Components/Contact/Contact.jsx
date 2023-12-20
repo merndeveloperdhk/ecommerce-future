@@ -12,7 +12,7 @@ const Contact = () => {
         <title>Contact | Welcome to my site</title>
       </Helmet>
                 <div className="text-center">
-                <h1 className="text-2xl font-bold mb-2">Contact Information</h1>
+                <h1 className="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-5xl font-black text-transparent">Contact Information</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nemo quod dicta repudiandae excepturi minima!</p>
                 </div>
                 <ContactIcons></ContactIcons>

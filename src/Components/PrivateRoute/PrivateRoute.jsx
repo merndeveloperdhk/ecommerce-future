@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
+import LoadingSpeaner from '../LoadingSpinner/LoadingSpeaner';
 
 const PrivateRoute = ({children}) => {
 
@@ -10,7 +11,8 @@ const PrivateRoute = ({children}) => {
     console.log(location);
     
     if(loading){
-        return <span className="loading loading-spinner text-info "></span>
+        // return <span className="loading loading-spinner text-info "></span>
+        return <LoadingSpeaner></LoadingSpeaner>
     }
     if(user){
         return children;

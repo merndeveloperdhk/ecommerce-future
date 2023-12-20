@@ -1,5 +1,5 @@
 import { IoMenu } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBottom = () => {
   return (
@@ -66,7 +66,7 @@ const NavBottom = () => {
               <Link to='/shop'>Shop</Link>
             </li>
             <li>
-              <Link to='/blog'>Blogs</Link>
+             <NavLink to='/blog' className={({isActive}) => isActive ? "text-red-500" : " text-black" } >Maps</NavLink>
             </li>
           </ul>
         </div>
@@ -125,7 +125,7 @@ const NavBottom = () => {
             <Link to='/shop'>Shop</Link>
           </li>
           <li className="hover:bg-[#149777] hover:text-white duration-500 hover:rounded">
-            <Link to='/blog'>Blogs</Link>
+           <NavLink to='/blog' className={({isActive}) => isActive ? "text-red-500" : " text-black" }>Maps</NavLink>
           </li>
         </ul>
       </div>
